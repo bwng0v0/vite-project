@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import Tag from './Tag.jsx'
 
 function App() {
+
+  const [Add,setAdd] = useState(false);
+
   return (
     <Container>
       <div>
@@ -9,9 +13,9 @@ function App() {
         <Title>어떤</Title>
         <Title>하루인가요?</Title>
         <TagBox>
-          <Tag>비오는</Tag><Tag>행복한</Tag><Tag>우울한</Tag>
-          <Tag>맑은</Tag><Tag>쉬고싶은</Tag><Tag>지루한</Tag>
-          <Tag>에너지 넘치는</Tag><Tag>😍</Tag><Tag>😭</Tag>
+          <Tag name='비오는' /><Tag name='행복한' /><Tag name='우울한' />
+          <Tag name='맑은' /><Tag name='쉬고싶은' /><Tag name='지루한' />
+          <Tag name='에너지 넘치는' /><Tag name='😍' /><Tag name='😭' />
         </TagBox>
         <Input placeholder='직접 입력'></Input>
       </div>
@@ -49,16 +53,16 @@ const TagBox = styled.div`
   gap:10px;
 `
 
-const Tag = styled.button`
-  width: fit-content;
-  background-color: #F0F2F4;
-  color: #606A78;
-  border-radius: 15px;
-  border: none;
-  box-sizing: border-box;
-  font-size: 24px;
-  padding: 2px 8px;
-`
+// const Tag = styled.button`
+//   width: fit-content;
+//   background-color: #F0F2F4;
+//   color: #606A78;
+//   border-radius: 15px;
+//   border: none;
+//   box-sizing: border-box;
+//   font-size: 24px;
+//   padding: 2px 8px;
+// `
 
 const Input = styled.input`
   &::placeholder{
