@@ -16,7 +16,7 @@ const Item = styled.button`
   /* background-color: ${props => props.added ? '#9CF1A5' : '#F0F2F4'}; */
   /* color: #606A78; */
   color: #8d939c;
-  /* color: ${props => props.added ? '#3ba345' : '#606A78'}; */
+  /* color: ${props => props.added ? '#606A78' : '#8d939c'}; */
   border-radius: 15px;
   border: solid 1px #E6E6E6;
   box-sizing: border-box;
