@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 import Tag from '../component/Tag.jsx'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function InputPage() {
+  
+  const [arr,setarr] = useState(['비오는','행복한','우울한','맑은','쉬고싶은','지루한','에너지 넘치는','😍','😭']);
+
   return (
     <Container>
       <div>
@@ -10,14 +14,12 @@ function InputPage() {
         <Title>어떤</Title>
         <Title>하루인가요?</Title>
         <TagBox>
-          <Tag name='비오는' /><Tag name='행복한' /><Tag name='우울한' />
-          <Tag name='맑은' /><Tag name='쉬고싶은' /><Tag name='지루한' />
-          <Tag name='에너지 넘치는' /><Tag name='😍' /><Tag name='😭' />
+          {arr.map((adj,index)=>(<Tag key={index}>{adj}</Tag>))}
         </TagBox>
         <Input placeholder='직접 입력'></Input>
       </div>
 
-      <Link to='/Recommend'><Submit>일정 추천받기</Submit></Link>
+      <Link onClick={()=>{}} to='/Recommend'><Submit>일정 추천받기</Submit></Link>
     </Container>
   )
 }

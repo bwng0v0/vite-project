@@ -15,7 +15,7 @@ function Recommend() {
                 <Item name='카페 가기' desc='음료 한잔 어떠신가요' c='#F8FFA4' />
             </Schedule>
 
-            <Submit>일정 추가하기</Submit>
+            <Link onClick={()=>{}} to='/Schedule'><Submit>일정 추가하기</Submit></Link>
         </Container>
     )
 }
@@ -42,6 +42,7 @@ const Schedule = styled.div`
 `
 
 const Submit = styled.button`
+    width: 100%;
     height: 50px;
     font-size: 17px;
     border: none;
