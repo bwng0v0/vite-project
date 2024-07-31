@@ -7,7 +7,7 @@ function Tag({children}){
   const [Added,setAdded] = useState(false);
 
     return(
-        <Item added={Added} onClick={()=>{setAdded(!Added); console.log(children); }} >{children}</Item>
+        <Item added={Added} onClick={()=>{setAdded(!Added);}} >{children}</Item>
     )
 }
 const Item = styled.button`

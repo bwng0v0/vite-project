@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 function InputPage() {
-  
-  const [arr,setarr] = useState(['비오는','행복한','우울한','맑은','쉬고싶은','지루한','에너지 넘치는','😍','😭']);
+
+  const [arr, setarr] = useState(['비오는', '행복한', '우울한', '맑은', '쉬고싶은', '지루한', '에너지 넘치는', '😍', '😭']);
+
 
   return (
     <Container>
@@ -14,12 +15,12 @@ function InputPage() {
         <Title>어떤</Title>
         <Title>하루인가요?</Title>
         <TagBox>
-          {arr.map((adj,index)=>(<Tag key={index}>{adj}</Tag>))}
+          {arr.map((adj, index) => (<Tag key={index}>{adj}</Tag>))}
         </TagBox>
         <Input placeholder='직접 입력'></Input>
       </div>
 
-      <Link onClick={()=>{}} to='/Recommend'><Submit>일정 추천받기</Submit></Link>
+      <Link onClick={() => { }} to='/Recommend'><Submit>일정 추천받기</Submit></Link>
     </Container>
   )
 }
@@ -55,17 +56,6 @@ const TagBox = styled.div`
   margin-bottom: 30px;
   gap:10px;
 `
-
-// const Tag = styled.button`
-//   width: fit-content;
-//   background-color: #F0F2F4;
-//   color: #606A78;
-//   border-radius: 15px;
-//   border: none;
-//   box-sizing: border-box;
-//   font-size: 24px;
-//   padding: 2px 8px;
-// `
 
 const Input = styled.input`
   &::placeholder{
